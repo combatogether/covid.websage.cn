@@ -22,9 +22,10 @@ router
 views.forEach(function(view, i) {
     var page = view.page;
     var data = view.data;
+    var ejs = view.view || page;
     (function(view) {
         router.get("/" + page + ".html", function(req, res) {
-            res.render(page, data);
+            res.render(ejs, data);
         });
     })(page);
 });
