@@ -44,7 +44,7 @@ var EJS_LIST = configPages.slice(0);
  * 自定义部署目录
  */
 var EJS_PATH = './views/';  
-var STATIC_PATH = './generate/';
+var STATIC_PATH = './docs/';
 var DEPLOY_PATH = './docs/';
 var DEV_LESS_PATH = './public/assets/stylesheets/less/';
 var DEV_CSS_PATH = './public/assets/stylesheets/';
@@ -77,7 +77,7 @@ EJS_LIST.forEach(function(tpl) {
     staticTasks.push(task);
     gulp.task(task, function() {
         // ejs 模板路径
-        var fileName = EJS_PATH + tpl.page + '.ejs';
+        var fileName = EJS_PATH + tpl.view + '.ejs';
 
         // 文件相对路径
         var dir = path.dirname(tpl.page);
@@ -138,6 +138,7 @@ gulp.task('min-image', function() {
  */
 USEMIN_HTML_LIST.forEach(function(htmlName) {
     var dir = path.dirname(htmlName);
+    console.log("-=-=-==-=-=",STATIC_PATH + htmlName)
     gulp.task('usemin-' + htmlName, function() {
         return gulp.src(STATIC_PATH + htmlName)
             .pipe(usemin({
