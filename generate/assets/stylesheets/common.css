@@ -5,17 +5,24 @@
 
 /* logo start */
 
-.logo {
+/* .logo {
     display: inline-block;
     width: 150px;
     height: 80px;
     background: url('../images/test.jpg') no-repeat #FB844F;
-}
+} */
 
 
 /* logo end */
 
-
+html {
+    font-family: Roboto,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,NotoSans-Regular,NotoSans,Nimbus Sans L,Arial,Lucida Grande,sans-serif,caption;
+}
+.banner {
+    /* width: 100%;
+    height: ;
+    background: url('../images/banner.jpg') no-repeat #FB844F; */
+}
 
 
 /* common start */
