@@ -16,7 +16,7 @@ var views = pagesConfig;
 
 router
     .get('/', function(req, res, next) {
-        res.render('index');
+        res.render('page1');
     });
 
 views.forEach(function(view, i) {

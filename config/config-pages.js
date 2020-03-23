@@ -12,8 +12,9 @@
  * data:{ title: 'index' }   在ejs模板里直接   <%= title %>
  */
 module.exports = [
-    { page: 'cn/index', view: 'rtl/index', data: { title: '1111' } },
-    { page: 'en/index', view: 'rtl/index', data: { title: '222' } },
+    { page: '', view: 'page1', data: { title: '1111' } },
+    { page: 'cn/index', view: 'page1', data: { title: '1111' } },
+    { page: 'en/index', view: 'page1', data: { title: '222' } },
     // { page: 'login', data: { title: 'login' } },
     // { page: '404', data: { title: '404' } },
     // { page: 'admin/dashboard', data: { title: 'admin/dashboard' } },
