@@ -32,7 +32,7 @@ function handlerData(data) {
     { page: 'cn/index_2', view: 'index', data: { title: '1111', data: handlerData(data2) , lang: 'cn', index: 2} },
     { page: 'cn/index_3', view: 'index', data: { title: '1111', data: handlerData(data3) , lang: 'cn', index: 3} },
     { page: 'cn/index_4', view: 'index', data: { title: '1111', data: handlerData(data4) , lang: 'cn', index: 4} },
-    { page: 'en/index', view: 'index', data: { title: '222' } },
+    // { page: 'en/index', view: 'index', data: { title: '222' } },
     // { page: 'login', data: { title: 'login' } },
     // { page: '404', data: { title: '404' } },
     // { page: 'admin/dashboard', data: { title: 'admin/dashboard' } },
