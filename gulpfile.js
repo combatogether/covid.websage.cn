@@ -73,6 +73,7 @@ gulp.task('clean-dist', function() {
  */
 var staticTasks = [];
 EJS_LIST.forEach(function(tpl) {
+    // console.log(tpl)
     var task = 'static-' + tpl.page + '.ejs';
     staticTasks.push(task);
     gulp.task(task, function() {
@@ -82,12 +83,16 @@ EJS_LIST.forEach(function(tpl) {
         // 文件相对路径
         var dir = path.dirname(tpl.page);
 
+        // console.log("::::::::::::::"+fileName)
+        // console.log("::::::::::::::"+STATIC_PATH + dir)
+
         // 编译ejs
         gulp.src(fileName)
             .pipe(ejs(tpl.data).on('error', gutil.log))
-            .pipe(rename({
-                extname: '.html'
-            }))
+            // .pipe(rename({
+            //     extname: '.html'
+            // }))
+            .pipe(rename(tpl.page + '.html'))
             .pipe(gulp.dest(STATIC_PATH + dir))
     });
 });
@@ -138,7 +143,7 @@ gulp.task('min-image', function() {
  */
 USEMIN_HTML_LIST.forEach(function(htmlName) {
     var dir = path.dirname(htmlName);
-    console.log("-=-=-==-=-=",STATIC_PATH + htmlName)
+    // console.log("-=-=-==-=-=",STATIC_PATH + htmlName)
     gulp.task('usemin-' + htmlName, function() {
         return gulp.src(STATIC_PATH + htmlName)
             .pipe(usemin({
