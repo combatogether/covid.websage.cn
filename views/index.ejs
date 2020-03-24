@@ -79,7 +79,7 @@
 					links = links.map((link, i) => {
 						let isActive = i+1 === current;
 						let class1 = isActive ? `class="active"` : '';
-						let href = `href='/${lang}/index_${i+1}.html'`;
+						let href = `href='./${lang}/index_${i+1}.html'`;
 						let html = `<li><a ${href} ${class1}>病毒知识</a></li>`;
 						return html;
 					})
