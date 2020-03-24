@@ -81,7 +81,7 @@ EJS_LIST.forEach(function(tpl) {
         var fileName = EJS_PATH + tpl.view + '.ejs';
 
         // 文件相对路径
-        var dir = path.dirname(tpl.page);
+        // var dir = path.dirname(tpl.page);
 
         // console.log("::::::::::::::"+fileName)
         // console.log("::::::::::::::"+STATIC_PATH + dir)
@@ -93,7 +93,7 @@ EJS_LIST.forEach(function(tpl) {
             //     extname: '.html'
             // }))
             .pipe(rename(tpl.page + '.html'))
-            .pipe(gulp.dest(STATIC_PATH + dir))
+            .pipe(gulp.dest(STATIC_PATH ))
     });
 });
 gulp.task("static", staticTasks, function() {
