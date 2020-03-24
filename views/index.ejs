@@ -52,8 +52,9 @@
 		background: gainsboro;
 	}
 
-	.content h2 {
+	.content h2, .content h3, .content p{
 		margin: 0;
+		margin-top: 15px;
 	}
 </style>
 
@@ -72,17 +73,51 @@
 	<div class="container">
 		<div class="nav clearfix">
 			<ul>
-				<li><a class="active">病毒知识</a></li>
-				<li><a>临床经验</a></li>
-				<li><a>治疗方法</a></li>
-				<li><a>自我防护</a></li>
+				<%
+					let current = index;
+					let links = ['病毒知识','临床经验','治疗方法','自我防护'];
+					links = links.map((link, i) => {
+						let isActive = i+1 === current;
+						let class1 = isActive ? `class="active"` : '';
+						let href = `href='/${lang}/index_${i+1}.html'`;
+						console.log(href)
+						let html = `<li><a ${href} ${class1}>病毒知识</a></li>`;
+						return html;
+					})
+				%>
+				<%-links.join('')%>
+				<!-- <li><a <%-index==1 ? 'class="active"' : ''%>>病毒知识</a></li>
+				<li><a <%-index==2 ? 'class="active"' : ''%>>临床经验</a></li>
+				<li><a <%-index==3 ? 'class="active"' : ''%>>治疗方法</a></li>
+				<li><a <%-index==4 ? 'class="active"' : ''%>>自我防护</a></li> -->
 			</ul>
 		</div>
 	</div>
 
 	<div class="container">
 		<div class="content">
+			<% 
+			let content = data.map(row => {
+				let id = row[0];
+				let zh_word = row[1];
+				let en_word = row[2];
+				let type = row[3] ? row[3].toLowerCase() : 'p';
+				
+				// 判断使用语言
+				let word = en_word;
+				if(lang == 'cn') word = zh_word;
+				if(lang == 'en') word = en_word;
 
+				// 判断类型
+				let html = ''
+				if(type == 'p') html = `<p>${word}</p>`;
+				if(type == 't1') html = `<h2>${word}</h2>`;
+				if(type == 't2') html = `<h3>${word}</h3>`;
+
+				return html;
+			});
+			%>
+			<%-content.join('')%>
 			<h2>临床证明</h2>
 			<p>ad咖啡机拉开打几份拉开就的福利卡机的了副科级阿拉山口的飞机阿连接都是福利卡设计的福利卡设计的福利卡机地方</p>
 		</div>
@@ -95,10 +130,10 @@
 <script>
 	$(function(){
 		// xxStaticHtml.pages.index.say();
-		$(".nav a").click(function(e){
-			$a = $(this);
-			$a.parent().parent().find("a").removeClass("active");
-			$a.addClass("active");
-		})
+		// $(".nav a").click(function(e){
+		// 	$a = $(this);
+		// 	$a.parent().parent().find("a").removeClass("active");
+		// 	$a.addClass("active");
+		// })
 	});
 </script>

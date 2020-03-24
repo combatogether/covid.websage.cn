@@ -11,9 +11,27 @@
  * 后面的data是给page页面提供数据用的
  * data:{ title: 'index' }   在ejs模板里直接   <%= title %>
  */
-module.exports = [
+
+const data1 = require('./data1');
+const data2 = require('./data2');
+const data3 = require('./data3');
+const data4 = require('./data4');
+
+function handlerData(data) {
+    let d = data
+    .split('\n')
+    .filter(item => item != '')
+    .map(item => item.split('\t'));
+    return d;
+}
+
+
+ module.exports = [
     // { page: '', view: 'page1', data: { title: '1111' } },
-    { page: 'cn/index', view: 'index', data: { title: '1111' } },
+    { page: 'cn/index_1', view: 'index', data: { title: '1111', data: handlerData(data1) , lang: 'cn', index: 1} },
+    { page: 'cn/index_2', view: 'index', data: { title: '1111', data: handlerData(data2) , lang: 'cn', index: 2} },
+    { page: 'cn/index_3', view: 'index', data: { title: '1111', data: handlerData(data3) , lang: 'cn', index: 3} },
+    { page: 'cn/index_4', view: 'index', data: { title: '1111', data: handlerData(data4) , lang: 'cn', index: 4} },
     { page: 'en/index', view: 'index', data: { title: '222' } },
     // { page: 'login', data: { title: 'login' } },
     // { page: '404', data: { title: '404' } },
