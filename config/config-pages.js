@@ -28,6 +28,7 @@ function handlerData(data) {
 
  module.exports = [
     // { page: '', view: 'page1', data: { title: '1111' } },
+    { page: 'index', view: 'index', data: { title: '1111', data: handlerData(data1) , lang: 'cn', index: 1} },
     { page: 'cn/index_1', view: 'index', data: { title: '1111', data: handlerData(data1) , lang: 'cn', index: 1} },
     { page: 'cn/index_2', view: 'index', data: { title: '1111', data: handlerData(data2) , lang: 'cn', index: 2} },
     { page: 'cn/index_3', view: 'index', data: { title: '1111', data: handlerData(data3) , lang: 'cn', index: 3} },
