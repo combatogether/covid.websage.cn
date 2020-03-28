@@ -51,7 +51,10 @@
 
 				// 判断类型
 				let html = ''
-				if(type == 'p') html = `<p>${word}</p>`;
+				if(type == 'p') {
+					word = word.replace(/\n/g, '</br>');
+					html = `<p>${word}</p>`;
+				}
 				if(type == 't1') html = `<h2>${word}</h2>`;
 				if(type == 't2') html = `<h3>${word}</h3>`;
 
@@ -59,23 +62,20 @@
 			});
 			%>
 			<%-content.join('')%>
-			<h2>临床证明</h2>
-			<p>ad咖啡机拉开打几份拉开就的福利卡机的了副科级阿拉山口的飞机阿连接都是福利卡设计的福利卡设计的福利卡机地方</p>
+			
 		</div>
 	</div>
 
-
-	<style>
-
-		
-
-
-
-	</style>
-
 	<div class="container footer">
 		<div class="row row-3">
-			<div class="col col-1"><a href="">English</a></div>
+			<%
+				let displayLang = 'English';
+				let lan = lang === 'en' ? 'cn' : 'en';
+				let url = `/${lan}/index_${index}.html`;
+				if(lang === 'en') displayLang = '中文';
+				
+			%>
+			<div class="col col-1"><a href="<%=url%>"><%=displayLang%></a></div>
 			<div class="col col-n bg-pink"><a href="">贡献者名单</a></div>
 			<div class="col col-1"><a href="">联系我们</a></div>
 		</div>

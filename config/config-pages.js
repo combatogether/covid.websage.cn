@@ -19,7 +19,8 @@ const data4 = require('./data4');
 
 function handlerData(data) {
     let d = data
-    .split('\n')
+    .replace(/"/g, "")
+    .split('\na')
     .filter(item => item != '')
     .map(item => item.split('\t'));
     return d;
