@@ -1,3 +1,26 @@
 /**
  * 移动设备兼容
  */
+
+@media (max-width: 800px) {
+  .nav li {
+    width: 25%;
+  }
+
+  .nav a {
+    padding: 0;
+  }
+
+  .bg-pink {
+    background: #f8588e;
+  }
+
+  .footer .col-1 {
+    width: 100px;
+  }
+  
+  .footer .col-n {
+    flex: 1;
+  }
+  
+}
