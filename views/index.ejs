@@ -78,15 +78,15 @@
 				if(lang === 'en') displayLang = '中文';
 			%>
 			<div class="col col-1"><a href="<%=url%>"><%=displayLang%></a></div>
-			<div class="col col-n bg-pink"><a id="btn-contributors">贡献者名单</a></div>
-			<div class="col col-1"><a id="btn-contact">联系我们</a></div>
+			<div class="col col-n bg-pink"><a id="btn-contributors"><%=otherData.a0224[langIndex]%></a></div>
+			<div class="col col-1"><a id="btn-contact"><%=otherData.a0245[langIndex]%></a></div>
 		</div>
 	</div>
 
 	<%
 		const boxData1 = {
 			id: "contributors",
-			title: "贡献者名单",
+			title: otherData.a0224[langIndex],
 			list: [
 				['管施林', '项目发起人、项目产品经理'],
 				['董文枭', '开发者'],
@@ -99,11 +99,11 @@
 
 		const boxData2 = {
 			id: "contact",
-			title: "贡献者名单",
+			title: otherData.a0245[langIndex],
 			list: [
-				['E-mail', 'silim0123@sina.com'],
-				['微博', '@一刀惊春楼'],
-				['Twitter', '@silim0123'],
+				['E-mail', '<a href="mailto:silim0123@sina.com?subject=Become a volunteer__申请成为志愿者">silim0123@sina.com</a>'],
+				['微博', '<a href="https://weibo.com/silim0123">@一刀惊春楼</a>'],
+				['Twitter', '<a href="https://twitter.com/silim0123">@silim0123</a>'],
 				['Github', '<a href="https://github.com/combatogether/combatogether.com">https://github.com/combatogether/combatogether.com</a>']
 			]
 		}
