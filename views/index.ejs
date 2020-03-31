@@ -1,36 +1,38 @@
 <% include partial/header.ejs %>
+<% let langIndex = lang == 'cn' ? 1 : 2; %>
 
 <body class="page-index">
 
 	<div class="container">
 		<div class="banner">
 			<div class="text">
-				<div class="row title1">抗击新型冠状病毒</div>
-				<div class="row title2">中国方案供世界参考</div>
-				<div class="row title3">方案整理来源：新型冠状病毒肺炎诊疗方案(试行第七版)</div>
+				<div class="row title1"><%=otherData.a0240[langIndex]%></div>
+				<div class="row title2"><%=otherData.a0241[langIndex]%></div>
+				<div class="row title3"><%=otherData.a0242[langIndex]%></div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" style="min-height: 42px;">
 		<div class="nav clearfix">
 			<ul>
 				<%
 					let current = index;
-					let links = ['病毒知识','临床经验','治疗方法','自我防护'];
+					// let links = ['病毒知识','临床经验','治疗方法','自我防护'];
+					let links = [
+						otherData.a0220[langIndex],
+						otherData.a0221[langIndex],
+						otherData.a0222[langIndex],
+						otherData.a0223[langIndex]];
 					links = links.map((link, i) => {
 						let isActive = i+1 === current;
 						let class1 = isActive ? `class="active"` : '';
 						let href = `href='../${lang}/index_${i+1}.html'`;
-						let html = `<li><a ${href} ${class1}>病毒知识</a></li>`;
+						let html = `<li><a ${href} ${class1}>${link}</a></li>`;
 						return html;
 					})
 				%>
 				<%-links.join('')%>
-				<!-- <li><a <%-index==1 ? 'class="active"' : ''%>>病毒知识</a></li>
-				<li><a <%-index==2 ? 'class="active"' : ''%>>临床经验</a></li>
-				<li><a <%-index==3 ? 'class="active"' : ''%>>治疗方法</a></li>
-				<li><a <%-index==4 ? 'class="active"' : ''%>>自我防护</a></li> -->
 			</ul>
 		</div>
 	</div>
@@ -57,6 +59,7 @@
 				}
 				if(type == 't1') html = `<h2>${word}</h2>`;
 				if(type == 't2') html = `<h3>${word}</h3>`;
+				if(type == 't3') html = `<h4>${word}</h4>`;
 
 				return html;
 			});
@@ -73,13 +76,79 @@
 				let lan = lang === 'en' ? 'cn' : 'en';
 				let url = `/${lan}/index_${index}.html`;
 				if(lang === 'en') displayLang = '中文';
-				
 			%>
 			<div class="col col-1"><a href="<%=url%>"><%=displayLang%></a></div>
-			<div class="col col-n bg-pink"><a href="">贡献者名单</a></div>
-			<div class="col col-1"><a href="">联系我们</a></div>
+			<div class="col col-n bg-pink"><a id="btn-contributors">贡献者名单</a></div>
+			<div class="col col-1"><a id="btn-contact">联系我们</a></div>
 		</div>
 	</div>
+
+	<%
+		const boxData1 = {
+			id: "contributors",
+			title: "贡献者名单",
+			list: [
+				['管施林', '项目发起人、项目产品经理'],
+				['董文枭', '开发者'],
+				['卿月拜雪', '提供了第一份《新型冠状病毒肺炎诊疗方案(试行第七版)》 中文资料'],
+				['客舟听雨', '提供了相关中英文资料'],
+				['冰雪无言', '负责中英句对配对及英文翻译工作'],
+				['渺幻', '对“自我防护”部分的内容，提供了专业的医学建议']
+			]
+		}
+
+		const boxData2 = {
+			id: "contact",
+			title: "贡献者名单",
+			list: [
+				['E-mail', 'silim0123@sina.com'],
+				['微博', '@一刀惊春楼'],
+				['Twitter', '@silim0123'],
+				['Github', 'https://github.com/combatogether/combatogether.com']
+			]
+		}
+
+		const modalData = [boxData1, boxData2];
+	%>
+
+	<%
+		let newModalData = modalData.map(item => {
+	%>
+	<div class="modal" id="modal-<%=item.id%>">
+		<div class="title-box"><a class="btn-back"><</a><%=item.title%><a class="btn-close">X</a></div>
+		<div class="content-box">
+			<%
+				item.list.map(i => {
+			%>
+			<div class="info-box">
+				<div class="title"><%=i[0]%></div>
+				<div class="desc"><%=i[1]%></div>
+			</div>
+			<%
+				});
+			%>
+		</div>
+	</div>
+	<%		
+		});
+	%>
+
+
+	<!-- 
+	<div class="modal">
+		<div class="title-box">贡献者名单<a class="btn-close">X</a></div>
+		<div class="content-box">
+			<div class="info-box">
+				<div class="title">管施林</div>
+				<div class="desc">项目发起人</div>
+			</div>
+			<div class="info-box">
+				<div class="title">管施林</div>
+				<div class="desc">项目发起人</div>
+			</div>
+		</div>
+	</div>
+ -->
 
 
 </body>
@@ -88,11 +157,33 @@
 
 <script>
 	$(function(){
-		// xxStaticHtml.pages.index.say();
-		// $(".nav a").click(function(e){
-		// 	$a = $(this);
-		// 	$a.parent().parent().find("a").removeClass("active");
-		// 	$a.addClass("active");
-		// })
+		function followNav (e) {
+			// do something
+			if(window.document.body.scrollTop >= 150){
+				$(".nav").addClass("fixed-nav");
+			} else {
+				$(".nav").removeClass("fixed-nav");
+			}
+		}
+
+		$(window).on('scroll', followNav);
+
+		// 
+
+		$(".btn-close").click((e) => {
+			$(e.target).parent().parent().removeClass("open");
+		});
+		$(".btn-back").click((e) => {
+			$(e.target).parent().parent().removeClass("open");
+		});
+
+		$("#btn-contributors").click(() => {
+			$("#modal-contributors").addClass("open");
+		});
+
+		$("#btn-contact").click(() => {
+			$("#modal-contact").addClass("open");
+		});
 	});
+
 </script>

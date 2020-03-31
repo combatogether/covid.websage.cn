@@ -19,26 +19,38 @@
   background-size: contain;
   background-position: center;
 }
+.banner .row {
+}
 .banner .text {
   position: relative;
   top: 30px;
   left: 20px;
+  width: 90%;
 }
 .banner .title1 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 200;
 }
 .banner .title2 {
-  font-size: 30px;
+  margin-top: 5px;
+  font-size: 20px;
   font-weight: 800;
+  line-height: 1;
 }
 .banner .title3 {
+  margin-top: 6px;
   font-size: 11px;
   font-weight: 200;
 }
 
 .nav {
   background: #0e4c82;
+}
+
+.fixed-nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .nav ul,
@@ -67,6 +79,7 @@
   background: #fff;
   color: #0e4c82;
   border-radius: 15px 15px 0px 0px;
+  font-weight: 500;
 }
 
 .content {
@@ -77,6 +90,7 @@
 
 .content h2,
 .content h3,
+.content h4,
 .content p {
   margin: 0;
   margin-top: 12px;
@@ -90,6 +104,30 @@
 .content h3 {
   color: #3b52f8;
   font-size: 15px;
+  font-weight: 400;
+}
+.content h3::before {
+  margin-right: 4px;
+  content: " ";
+  display: inline-block;
+  width: 4px;
+  height: 12px;
+  background: rgba(248, 88, 142, 1);
+}
+
+.content h4 {
+  color: #3b52f8;
+  font-size: 14px;
+  font-weight: 400;
+}
+.content h4::before {
+  margin-right: 4px;
+  content: " ";
+  display: inline-block;
+  width: 4px;
+  height: 12px;
+  border:1px solid rgba(248,88,142,1);
+  box-sizing: border-box;
 }
 
 .content p {
@@ -125,5 +163,66 @@
   text-align: center;
   line-height: 40px;
   color: #fefefe;
+  font-size: 12px;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  width: 500px;
+  min-height: 500px;
+  background: #fff;
+  border: 1px solid;
+}
+.modal.open {
+  display: block;
+}
+
+.modal .title-box {
+  position: relative;
+  text-align: center;
+  background: #0E4C82;
+  font-size: 15px;
+  line-height: 40px;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+}
+
+.modal .title-box .btn-back,
+.modal .title-box .btn-close {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  height: 40px;
+  width: 40px;
+}
+
+.modal .title-box .btn-back {
+  display: none;
+  right: auto;
+  left: 0;
+}
+
+.modal .content-box {
+  padding: 10px 20px;
+}
+
+.modal .info-box {
+  margin: 20px 0 15px 0;
+}
+
+.modal .info-box .title {
+  color: #3b52f8;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.modal .info-box .desc {
+  color: #333;
   font-size: 12px;
 }

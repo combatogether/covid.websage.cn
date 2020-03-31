@@ -16,6 +16,7 @@ const data1 = require('./data1');
 const data2 = require('./data2');
 const data3 = require('./data3');
 const data4 = require('./data4');
+const data5 = require('./data5');
 
 function handlerData(data) {
     let d = data
@@ -26,22 +27,41 @@ function handlerData(data) {
     return d;
 }
 
+function handlerDataOther(data) {
+    let d = data
+    // .replace(/"/g, "")
+    .split('\n')
+    .filter(item => item != '')
+    .map(item => item.split('\t'));
+    return d;
+}
+
+function toKeyValue(data = []) {
+    let result = {};
+    for(let i=0; i<data.length; i++){
+        result[data[i][0]] = data[i];
+    }
+    return result;
+}
+
+const otherData = toKeyValue(handlerDataOther(data5))
+console.log(otherData)
 
  module.exports = [
     // { page: '', view: 'page1', data: { title: '1111' } },
 
 
-    { page: 'index', view: 'index', data: { title: '1111', data: handlerData(data1) , lang: 'cn', index: 1} },
-    { page: 'cn/index_1', view: 'index', data: { title: '1111', data: handlerData(data1) , lang: 'cn', index: 1} },
-    { page: 'cn/index_2', view: 'index', data: { title: '1111', data: handlerData(data2) , lang: 'cn', index: 2} },
-    { page: 'cn/index_3', view: 'index', data: { title: '1111', data: handlerData(data3) , lang: 'cn', index: 3} },
-    { page: 'cn/index_4', view: 'index', data: { title: '1111', data: handlerData(data4) , lang: 'cn', index: 4} },
+    { page: 'index', view: 'index', data: { title: '1111', data: handlerData(data1) , otherData, lang: 'cn', index: 1} },
+    { page: 'cn/index_1', view: 'index', data: { title: '1111', data: handlerData(data1) , otherData, lang: 'cn', index: 1} },
+    { page: 'cn/index_2', view: 'index', data: { title: '1111', data: handlerData(data2) , otherData, lang: 'cn', index: 2} },
+    { page: 'cn/index_3', view: 'index', data: { title: '1111', data: handlerData(data3) , otherData, lang: 'cn', index: 3} },
+    { page: 'cn/index_4', view: 'index', data: { title: '1111', data: handlerData(data4) , otherData, lang: 'cn', index: 4} },
 
-    { page: 'index', view: 'index', data: { title: '1111', data: handlerData(data1) , lang: 'cn', index: 1} },
-    { page: 'en/index_1', view: 'index', data: { title: '1111', data: handlerData(data1) , lang: 'en', index: 1} },
-    { page: 'en/index_2', view: 'index', data: { title: '1111', data: handlerData(data2) , lang: 'en', index: 2} },
-    { page: 'en/index_3', view: 'index', data: { title: '1111', data: handlerData(data3) , lang: 'en', index: 3} },
-    { page: 'en/index_4', view: 'index', data: { title: '1111', data: handlerData(data4) , lang: 'en', index: 4} },
+    { page: 'index', view: 'index', data: { title: '1111', data: handlerData(data1) , otherData, lang: 'cn', index: 1} },
+    { page: 'en/index_1', view: 'index', data: { title: '1111', data: handlerData(data1) , otherData, lang: 'en', index: 1} },
+    { page: 'en/index_2', view: 'index', data: { title: '1111', data: handlerData(data2) , otherData, lang: 'en', index: 2} },
+    { page: 'en/index_3', view: 'index', data: { title: '1111', data: handlerData(data3) , otherData, lang: 'en', index: 3} },
+    { page: 'en/index_4', view: 'index', data: { title: '1111', data: handlerData(data4) , otherData, lang: 'en', index: 4} },
 
 
     // { page: 'en/index', view: 'index', data: { title: '222' } },
