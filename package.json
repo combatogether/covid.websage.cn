@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node-dev ./bin/www",
     "static": "gulp step1",
-    "go": "npm run static && git commit -a -m 'test' && git push",
+    "copy": "cp CNAME ./docs/",
+    "go": "npm run static && npm run copy && git commit -a -m 'update website' && git push",
     "dist": "gulp step2",
     "watch-less": "gulp auto-less"
   },

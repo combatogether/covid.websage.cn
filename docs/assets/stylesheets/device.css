@@ -18,9 +18,62 @@
   .footer .col-1 {
     width: 100px;
   }
-  
+
   .footer .col-n {
     flex: 1;
   }
-  
+
+  html[lang="en"] .nav a {
+    font-size: 12px;
+    line-height: 1.3;
+    padding: 5 15px;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    background: #fff;
+  }
+
+  .modal .title-box {
+    position: relative;
+    text-align: center;
+    background: #0e4c82;
+    font-size: 15px;
+    line-height: 40px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .modal .title-box .btn-close {
+    display: none;
+  }
+
+  .modal .title-box .btn-back {
+    display: block;
+  }
+
+  .modal .content-box {
+    padding: 10px 20px;
+  }
+
+  .modal .info-box {
+    margin: 20px 0 15px 0;
+  }
+
+  .modal .info-box .title {
+    color: #3b52f8;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .modal .info-box .desc {
+    color: #333;
+    font-size: 12px;
+  }
 }
