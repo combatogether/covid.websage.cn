@@ -1,73 +1,52 @@
-# 纯静态HTML开发框架[static-html]
+# 这是一个公益项目
 
-> 说明 - 项目目的，
-> 此项目适用于开发纯静态 HTML+CSS+JS 项目，减少重复代码。
-> 比方说：网站项目初期，前端同学提供给服务端同学的纯静态文件。
-
-
-
-### Feature
-
- - server 本项目服务端依托于Express,开发过程中使用动态模板方式
- - html 碎片化开发模式(利用EJS模版减少编写重复html)
- - html、css、js代码均有清晰的结构(根据我的经验进行拆分多个文件，在打包时候轻松合并)
- - css、js 的引用地址会在打包时候自动加上版本号(```<link rel=stylesheet href="assets/css/lib.min.css?v=59bbc2f39c">```)
+> 背景：<br>
+> 当下全球受到新型冠状病毒的疫情影响，很多国家缺乏防护知识和控疫经验。<br>
+> 中国是世界上最先受到严重影响的国家，也是控制疫情最好的国家，<br>
+> 因此，我们希望能把中国经验分享给世界，帮助更多需要的受灾国家。
 
 
-### Start
-> 注：本项目使用了两个node工具，需要安装到全局
-[node-dev](https://www.npmjs.com/package/node-dev) & [gulp](https://www.npmjs.com/package/gulp)
-```
-npm install -g node-dev gulp
-```
+
+# 我们还需要更多的志愿者
+
+## 把中国资料翻译成更多语言
+
+  目前资料已支持：[英文](https://www.combatogether.com/)、[中文](https://www.combatogether.com/cn/index_1.html)  
+
+  需要更多语种：  
+  日语、韩语、越南语、印尼语、印地语（印度）、意大利语、匈牙利语、希腊语、希伯来语、西班牙语（拉美）、乌克兰语、乌尔都语、土耳其语、泰语、泰米尔语（印度）、斯洛文尼亚语、斯洛伐克语、塞尔维亚语、瑞典语、日语、葡萄牙语（巴西）、葡萄、挪威语、缅甸语、马来语、罗马尼亚语、克罗地亚语、捷克语、荷兰语、韩语、芬兰语、菲律宾语、法语、俄语、德语、丹麦语、波斯语、波兰语、保加利亚语、爱尔兰语、阿拉伯语
 
 
-1.Clone 项目代码
-```sh
-mkdir [project_path] && cd [project_path]
-clone [git_url]
-```
+## 成为志愿者
 
-2.安装 NPM 依赖包
-```sh
-cd [project_path]
-npm install
-```
+通过下面方式联系我们：
 
-3.配置 HTML 文件名
-打开页面配置文件 : /config/config-pages.js
-```js
-// page 字段对应 /views/* 
-// data 字段是给页面提供的数据，
-// 在页面中可以通过<%= title %>这样访问
-module.exports = [
-    { page: 'index', data: { title: 'index' } },
-    { page: '404', data: { title: '404' } },
-    { page: 'admin/dashboard', data: { title: 'admin/dashboard' } }
-];
-```
-如果我们新增加一个页面，要对应增加 ```/views/``` 下面的 ```xx.ejs ```和```/config-pages.js``` 下面的 ```{ page: 'xx', data: { title: 'xx' } }``` 配置。
+1. 在这里留言，提 [Issues](https://github.com/combatogether/combatogether.com/issues/new)
+2. Email: silim0123@sina.com
 
 
-### Usage
+---
 
-1.启动开发模式(运行起Express Web服务)
-```sh
-npm start
-```
-监视less文件(打开less文件检测，如果less文件改变则自动编译)
-```sh
-npm run watch-less
-```
-2.生成纯静态文件(把HTML片段拼接成生成完整HTML并Copy相关静态文件)
+# This is a public welfare project
 
-默认生成到 /generate 文件夹 (此文件下的静态文件用于交付服务端同学套模板用)
-```sh
-npm run static
-```
-3.打包(根据页面里的usemin配置，执行gulp打包相关任务：合并、压缩、更新引用)
+> Background: <br>
+> The world is currently affected by the epidemic of new coronaviruses, and many countries lack protection knowledge and experience in epidemic control. <br>
+> China is the first country in the world to be severely affected and is also the country with the best control of the epidemic. <br>
+> Therefore, we hope to share China's experience with the world and help more affected countries in need.
 
-默认生成到： /dist 文件夹 (此文件夹下的静态文件用于发布到线上)
-```sh
-npm run dist
-```
+# We need more volunteers
+
+## Translate Chinese materials into more languages
+
+Currently supported materials: [English](https://www.combatogether.com/)、[Chinese](https://www.combatogether.com/cn/index_1.html)  
+
+Need more languages:  
+Japanese, Korean, Vietnamese, Indonesian, Hindi (India), Italian, Hungarian, Greek, Hebrew, Spanish (Latin American), Ukrainian, Urdu, Turkish, Thai, Tamil (India), Slovenian, Slovak, Serbian, Swedish, Japanese, Portuguese (Brazil), Grape, Norwegian, Burmese, Malay, Romanian, Croatian, Czech, Dutch , Korean, Finnish, Filipino, French, Russian, German, Danish, Persian, Polish, Bulgarian, Irish, Arabic
+
+## Become a volunteer
+
+Contact us:
+
+1. Leave a message here [Issues](https://github.com/combatogether/combatogether.com/issues/new)  
+2. Email: silim0123@sina.com
+
