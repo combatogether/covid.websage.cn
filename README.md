@@ -1,8 +1,8 @@
 # 这是一个公益项目
 
-> 背景：<br>
-> 当下全球受到新型冠状病毒的疫情影响，很多国家缺乏防护知识和控疫经验。<br>
-> 中国是世界上最先受到严重影响的国家，也是控制疫情最好的国家，<br>
+> 背景：  
+> 当下全球受到新型冠状病毒的疫情影响，很多国家缺乏防护知识和控疫经验。  
+> 中国是世界上最先受到严重影响的国家，也是控制疫情最好的国家，  
 > 因此，我们希望能把中国经验分享给世界，帮助更多需要的受灾国家。
 
 
@@ -29,9 +29,9 @@
 
 # This is a public welfare project
 
-> Background: <br>
-> The world is currently affected by the epidemic of new coronaviruses, and many countries lack protection knowledge and experience in epidemic control. <br>
-> China is the first country in the world to be severely affected and is also the country with the best control of the epidemic. <br>
+> Background:   
+> The world is currently affected by the epidemic of new coronaviruses, and many countries lack protection knowledge and experience in epidemic control.
+> China is the first country in the world to be severely affected and is also the country with the best control of the epidemic.
 > Therefore, we hope to share China's experience with the world and help more affected countries in need.
 
 # We need more volunteers

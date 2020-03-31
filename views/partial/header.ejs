@@ -5,11 +5,15 @@
 <!--[if IE 9 ]><html class="ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="<%-lang%>"><!--<![endif]-->
 <head>
-	<title>中国方案</title>
+	<title><%=otherData.a0241[langIndex]%></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=.2, maximum-scale=1.0, user-scalable=yes">
-	<meta name="keywords" content="">
-	<meta name="description" itemprop="description" content="">
+	<%
+		let keywords = [otherData.a0220[langIndex], otherData.a0221[langIndex], otherData.a0222[langIndex], otherData.a0223[langIndex]];
+		let description = `${otherData.a0241[langIndex]}: ${keywords.join(",")}, ${otherData.a0242[langIndex]}.`;
+	%>
+	<meta name="keywords" content="<%=keywords.join(",")%>">
+	<meta name="description" content="<%=description%>">
 	<meta itemprop="name" content="">
 	<meta itemprop="image" content="">
 	<meta name="format-detection" content="email=no" />

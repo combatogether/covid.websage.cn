@@ -51,13 +51,13 @@ const otherData = toKeyValue(handlerDataOther(data5))
     // { page: '', view: 'page1', data: { title: '1111' } },
 
 
-    { page: 'index', view: 'index', data: { title: '1111', data: handlerData(data1) , otherData, lang: 'cn', index: 1} },
+    // { page: 'index', view: 'index', data: { title: '1111', data: handlerData(data1) , otherData, lang: 'cn', index: 1} },
     { page: 'cn/index_1', view: 'index', data: { title: '1111', data: handlerData(data1) , otherData, lang: 'cn', index: 1} },
     { page: 'cn/index_2', view: 'index', data: { title: '1111', data: handlerData(data2) , otherData, lang: 'cn', index: 2} },
     { page: 'cn/index_3', view: 'index', data: { title: '1111', data: handlerData(data3) , otherData, lang: 'cn', index: 3} },
     { page: 'cn/index_4', view: 'index', data: { title: '1111', data: handlerData(data4) , otherData, lang: 'cn', index: 4} },
 
-    { page: 'index', view: 'index', data: { title: '1111', data: handlerData(data1) , otherData, lang: 'cn', index: 1} },
+    { page: 'index', view: 'index', data: { title: '1111', data: handlerData(data1) , otherData, lang: 'en', index: 1} },
     { page: 'en/index_1', view: 'index', data: { title: '1111', data: handlerData(data1) , otherData, lang: 'en', index: 1} },
     { page: 'en/index_2', view: 'index', data: { title: '1111', data: handlerData(data2) , otherData, lang: 'en', index: 2} },
     { page: 'en/index_3', view: 'index', data: { title: '1111', data: handlerData(data3) , otherData, lang: 'en', index: 3} },
