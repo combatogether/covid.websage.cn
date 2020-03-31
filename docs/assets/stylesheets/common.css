@@ -2,7 +2,6 @@
  * 全局公共类型 css class
  */
 
-
 /* logo start */
 
 /* .logo {
@@ -12,41 +11,46 @@
     background: url('../images/test.jpg') no-repeat #FB844F;
 } */
 
-
 /* logo end */
 
 html {
-    font-family: Roboto,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,NotoSans-Regular,NotoSans,Nimbus Sans L,Arial,Lucida Grande,sans-serif,caption;
+  font-family: Roboto, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue,
+    Helvetica, NotoSans-Regular, NotoSans, Nimbus Sans L, Arial, Lucida Grande,
+    sans-serif, caption;
 }
 .banner {
-    /* width: 100%;
+  /* width: 100%;
     height: ;
     background: url('../images/banner.jpg') no-repeat #FB844F; */
 }
 
-
 /* common start */
 
 .pull-left {
-    float: left;
+  float: left;
 }
 
 .pull-right {
-    float: right;
+  float: right;
 }
 
 .clearfix:before,
 .clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 .clearfix {
-    *+height: 1%;
+  *+height: 1%;
 }
 
+a {
+  text-decoration: none;
+  color: aliceblue;
+  cursor: pointer;
+}
 
 /* common end */

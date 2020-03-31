@@ -48,5 +48,10 @@ html {
     *+height: 1%;
 }
 
+a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+  }
 
 /* common end */

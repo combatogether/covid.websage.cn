@@ -73,6 +73,7 @@
   cursor: pointer;
   font-size: 15px;
   line-height: 42px;
+  text-align: center;
 }
 
 .nav a.active {
@@ -200,6 +201,7 @@
   right: 0;
   height: 40px;
   width: 40px;
+  color:rgba(255,255,255,1);
 }
 
 .modal .title-box .btn-back {
