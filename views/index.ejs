@@ -78,9 +78,9 @@
 				let url = `/${lan}/index_${index}.html`;
 				if(lang === 'en') displayLang = '中文';
 			%>
-			<div class="col col-1"><a href="<%=url%>"><%=displayLang%></a></div>
+			<div class="col col-1"><a href="<%=url%>"><i class="icon-lang"></i><%=displayLang%></a></div>
 			<div class="col col-n bg-pink"><a id="btn-contributors"><%=otherData.a0224[langIndex]%></a></div>
-			<div class="col col-1"><a id="btn-contact"><%=otherData.a0245[langIndex]%></a></div>
+			<div class="col col-1"><a id="btn-contact"><i class="icon-contact"></i><%=otherData.a0245[langIndex]%></a></div>
 		</div>
 	</div>
 
@@ -89,8 +89,8 @@
 			id: "contributors",
 			title: otherData.a0224[langIndex],
 			list: [
-				['管施林', '项目发起人、项目产品经理'],
-				['董文枭', '开发者'],
+				['管施林', '项目发起人、项目产品经理<br>Leader'],
+				['董文枭', '开发者<br>Web Developer'],
 				['卿月拜雪', '提供了第一份《新型冠状病毒肺炎诊疗方案(试行第七版)》 中文资料'],
 				['客舟听雨', '提供了相关中英文资料'],
 				['冰雪无言', '负责中英句对配对及英文翻译工作'],
@@ -116,7 +116,7 @@
 		let newModalData = modalData.map(item => {
 	%>
 	<div class="modal" id="modal-<%=item.id%>">
-		<div class="title-box"><a class="btn-back"><</a><%=item.title%><a class="btn-close">X</a></div>
+		<div class="title-box"><a class="btn-back"><i class="icon-back"></i></a><%=item.title%><a class="btn-close">X</a></div>
 		<div class="content-box">
 			<%
 				item.list.map(i => {
@@ -171,17 +171,16 @@
 
 		// 
 
-		$(".btn-close").click((e) => {
+		$(".btn-close,.btn-back").click((e) => {
 			$(e.target).parent().parent().removeClass("open");
 		});
-		$(".btn-back").click((e) => {
-			$(e.target).parent().parent().removeClass("open");
+		$(".icon-back").click((e) => {
+			$(e.target).parent().parent().parent().removeClass("open");
 		});
 
 		$("#btn-contributors").click(() => {
 			$("#modal-contributors").addClass("open");
 		});
-
 		$("#btn-contact").click(() => {
 			$("#modal-contact").addClass("open");
 		});
