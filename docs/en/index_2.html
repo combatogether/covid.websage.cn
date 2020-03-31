@@ -67,9 +67,9 @@
 	<div class="container footer">
 		<div class="row row-3">
 			
-			<div class="col col-1"><a href="/cn/index_2.html">中文</a></div>
+			<div class="col col-1"><a href="/cn/index_2.html"><i class="icon-lang"></i>中文</a></div>
 			<div class="col col-n bg-pink"><a id="btn-contributors">Name  List of Devotors</a></div>
-			<div class="col col-1"><a id="btn-contact">Contact</a></div>
+			<div class="col col-1"><a id="btn-contact"><i class="icon-contact"></i>Contact</a></div>
 		</div>
 	</div>
 
@@ -77,17 +77,17 @@
 
 	
 	<div class="modal" id="modal-contributors">
-		<div class="title-box"><a class="btn-back"><</a>Name  List of Devotors<a class="btn-close">X</a></div>
+		<div class="title-box"><a class="btn-back"><i class="icon-back"></i></a>Name  List of Devotors<a class="btn-close">X</a></div>
 		<div class="content-box">
 			
 			<div class="info-box">
 				<div class="title">管施林</div>
-				<div class="desc">项目发起人、项目产品经理</div>
+				<div class="desc">项目发起人、项目产品经理<br>Leader</div>
 			</div>
 			
 			<div class="info-box">
 				<div class="title">董文枭</div>
-				<div class="desc">开发者</div>
+				<div class="desc">开发者<br>Web Developer</div>
 			</div>
 			
 			<div class="info-box">
@@ -114,7 +114,7 @@
 	</div>
 	
 	<div class="modal" id="modal-contact">
-		<div class="title-box"><a class="btn-back"><</a>Contact<a class="btn-close">X</a></div>
+		<div class="title-box"><a class="btn-back"><i class="icon-back"></i></a>Contact<a class="btn-close">X</a></div>
 		<div class="content-box">
 			
 			<div class="info-box">
@@ -184,17 +184,16 @@
 
 		// 
 
-		$(".btn-close").click((e) => {
+		$(".btn-close,.btn-back").click((e) => {
 			$(e.target).parent().parent().removeClass("open");
 		});
-		$(".btn-back").click((e) => {
-			$(e.target).parent().parent().removeClass("open");
+		$(".icon-back").click((e) => {
+			$(e.target).parent().parent().parent().removeClass("open");
 		});
 
 		$("#btn-contributors").click(() => {
 			$("#modal-contributors").addClass("open");
 		});
-
 		$("#btn-contact").click(() => {
 			$("#modal-contact").addClass("open");
 		});
