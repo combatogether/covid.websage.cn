@@ -45,7 +45,7 @@ function toKeyValue(data = []) {
 }
 
 const otherData = toKeyValue(handlerDataOther(data5))
-// console.log(otherData)
+// console.log(handlerData(data1))
 
  module.exports = [
     // { page: '', view: 'page1', data: { title: '1111' } },
