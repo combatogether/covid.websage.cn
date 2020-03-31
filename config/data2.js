@@ -7,9 +7,9 @@ a0036	部分儿童及新生儿病例症状可不典型，表现为呕吐、腹�
 a0037	轻型患者仅表现为低热、轻微乏力等，无肺炎表现。	The patients with mild symptoms  did not develop pneumonia but only low fever and mild fatigue.	P
 a0038	从目前收治的病例情况看，多数患者预后良好，少数患者病情危重。老年人和有慢性基础疾病者预后较差。患有新型冠状病毒肺炎的孕产妇临床过程与同龄患者相近。儿童病例症状相对较轻。	From current situations, most  patients have good prognosis and a small number of patients are critically  ill. The prognosis for the elderly and patients with chronic underlying  diseases is poor. The clinical course of pregnant women with NCP is similar to  that of patients of the same age. Symptoms in children are relatively mild.	P
 a0039	（二）实验室检查。	2. Laboratory tests	T2
-a0040	1.一般检查	1) General findings	T3
+a0040	一般检查	General findings	T3
 a0041	发病早期外周血白细胞总数正常或减少，可见淋巴细胞计数减少，部分患者可出现肝酶、乳酸脱氢酶（LDH）、肌酶和肌红蛋白增高；部分危重者可见肌钙蛋白增高。多数患者C反应蛋白（CRP）和血沉升高，降钙素原正常。严重者D-二聚体升高、外周血淋巴细胞进行性减少。重型、危重型患者常有炎症因子升高。	In the early stages of the  disease, peripheral WBC count is normal or decreased and the lymphocyte count  decreases. Some patients see an increase in liver enzymes, lactate  dehydrogenase (LDH), muscle enzymes and myoglobin. Elevated troponin is seen  in some critically ill patients while most patients have elevated C-reactive  protein and erythrocyte sedimentation rate and normal procalcitonin. In  severe cases, D-dimer increases and peripheral blood lymphocytes  progressively decrease. Severe and critically ill patients often have  elevated inflammatory factors.	P
-a0042	2.病原学及血清学检查	2) Pathogenic and serological  findings	T3
+a0042	病原学及血清学检查	Pathogenic and serological  findings	T3
 a0043	（1）病原学检查：采用RT-PCR或/和NGS方法在鼻咽拭子、痰和其他下呼吸道分泌物、血液、粪便等标本中可检测出新型冠状病毒核酸。检测下呼吸道标本（痰或气道抽取物）更加准确。标本采集后尽快送检。	(1) Pathogenic findings: Novel  coronavirus nucleic acid can be detected in nasopharyngeal swabs, sputum,  lower respiratory tract secretions, blood, feces and other specimens using  RT-PCR and/or NGS methods. It is more accurate if specimens from lower respiratory  tract (sputum or air tract extraction) are tested. The specimens should be  submitted for testing as soon as possible after collection.	P
 a0044	（2）血清学检查：新型冠状病毒特异性IgM抗体多在发病3-5天后开始出现阳性，IgG抗体滴度恢复期较急性期有4倍及以上增高。	(2) Serological findings: NCP  virus specific IgM becomes detectable around 3-5 days after onset; IgG  reaches a titration of at least 4-fold increase during convalescence compared  with the acute phase.	P
 a0045	（三）胸部影像学。	3. Chest imaging	T2
@@ -17,12 +17,12 @@ a0046	早期呈现多发小斑片影及间质改变，以肺外带明显。进�
 a0047	五、诊断标准	V. Case Definitions	T1
 a0048	（一）疑似病例。	1. Suspect cases	T2
 a0049	结合下述流行病学史和临床表现综合分析：	Considering both the following  epidemiological history and clinical manifestations:	P
-a0050	1.流行病学史	1.1 Epidemiological history	T3
+a0050	流行病学史	Epidemiological history	T3
 a0051	（1）发病前14天内有武汉市及周边地区，或其他有病例报告社区的旅行史或居住史；	1.1.1 History of travel to or  residence in Wuhan and its surrounding areas, or in other communities where  cases have been reported within 14 days prior to the onset of the disease;	P
 a0052	（2）发病前14天内与新型冠状病毒感染者（核酸检测阳性者）有接触史；	1.1.2 In contact with novel  coronavirus infected people (with positive results for the nucleic acid test)  within 14 days prior to the onset of the disease;	P
 a0053	（3）发病前14天内曾接触过来自武汉市及周边地区，或来自有病例报告社区的发热或有呼吸道症状的患者；	1.1.3 In contact with patients  who have fever or respiratory symptoms from Wuhan and its surrounding area,  or from communities where confirmed cases have been reported within 14 days  before the onset of the disease;	P
 a0054	（4）聚集性发病（2周内在小范围如家庭、办公室、学校班级等场所，出现2例及以上发热和/或呼吸道症状的病例）。	1.1.4 Clustered cases (2 or more  cases with fever and/or respiratory symptoms in a small area such families,  offices, schools etc within 2 weeks).	P
-a0055	2.临床表现	1.2 Clinical manifestations	T3
+a0055	临床表现	Clinical manifestations	T3
 a0056	（1）发热和/或呼吸道症状；	1.2.1 Fever and/or respiratory  symptoms;	P
 a0057	（2）具有上述新型冠状病毒肺炎影像学特征；	1.2.2 The aforementioned imaging  characteristics of NCP;	P
 a0058	（3）发病早期白细胞总数正常或降低，淋巴细胞计数正常或减少。	1.2.3 Normal or decreased WBC  count, normal or decreased lymphocyte count in the early stage of onset.	P
