@@ -1,7 +1,7 @@
 const data = `
 a0225	为什么要自我防护	Why we  need self protection	T1
 a0226	"1.如果我们病了，医护人员会全力以赴救治我们；
-    2.如果我们所有人都病了，我们未必每个人都能得的到医护人员的救治，因为就不过来；
+    2.如果我们所有人都病了，我们未必每个人都能得的到医护人员的救治，因为救不过来；
     3.如果医护人员累倒了或病倒了，将没有人来救我们了。"	"1.If we  were sick, the doctors will try their best to save us;
     2.If all of us got sick, due to short of hands, the doctors can't help all  of us.
     3. If doctors got sick or exausted, there would be no one can save us."	P
@@ -22,4 +22,3 @@ a0239	希望没有疫情，自由自在的日子早日回到这个世界，人�
 
 
 module.exports = data;
-
