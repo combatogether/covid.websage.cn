@@ -40,32 +40,43 @@
 	<div class="container">
 		<div class="content">
 			<% 
-			let content = data.map(row => {
-				let id = row[0];
-				let zh_word = row[1];
-				let en_word = row[2];
-				let type = row[3] ? row[3].toLowerCase() : 'p';
-				
-				// 判断使用语言
-				let word = en_word;
-				if(lang == 'cn') word = zh_word;
-				if(lang == 'en') word = en_word;
-
-				// 判断类型
-				let html = ''
-				if(~type.indexOf('p')) {
-					word = word.replace(/\n/g, '</br>');
-					html = `<p>${word}</p>`;
-				}
-				if(~type.indexOf('t1')) html = `<h2>${word}</h2>`;
-				if(~type.indexOf('t2')) html = `<h3>${word}</h3>`;
-				if(~type.indexOf('t3')) html = `<h4>${word}</h4>`;
-				if(~type.indexOf('t4')) html = `<h5>${word}</h5>`;
-
-				return html;
-			});
+			if(data && typeof data === 'object'){
+				let content = data.map(row => {
+					let id = row[0];
+					let zh_word = row[1];
+					let en_word = row[2];
+					let type = row[3] ? row[3].toLowerCase() : 'p';
+					
+					// 判断使用语言
+					let word = en_word;
+					if(lang == 'cn') word = zh_word;
+					if(lang == 'en') word = en_word;
+	
+					// 判断类型
+					let html = ''
+					if(~type.indexOf('p')) {
+						word = word.replace(/\n/g, '</br>');
+						html = `<p>${word}</p>`;
+					}
+					if(~type.indexOf('t1')) html = `<h2>${word}</h2>`;
+					if(~type.indexOf('t2')) html = `<h3>${word}</h3>`;
+					if(~type.indexOf('t3')) html = `<h4>${word}</h4>`;
+					if(~type.indexOf('t4')) html = `<h5>${word}</h5>`;
+	
+					return html;
+				});
 			%>
-			<%-content.join('')%>
+
+				<%-content.join('')%>
+
+			<%
+			}else {
+			%>
+				<%-data%>
+			
+			<%}%>
+			
+			
 			
 		</div>
 	</div>
@@ -81,6 +92,8 @@
 			<div class="col col-1"><a href="<%=url%>"><i class="icon-lang"></i><%=displayLang%></a></div>
 			<div class="col col-n bg-pink"><a id="btn-contributors"><%=otherData.a0224[langIndex]%></a></div>
 			<div class="col col-1"><a id="btn-contact"><i class="icon-contact"></i><%=otherData.a0245[langIndex]%></a></div>
+			<div class="col col-1"><a href="/en/article_1.html">Articles</a></div>
+
 		</div>
 	</div>
 

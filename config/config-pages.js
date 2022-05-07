@@ -62,6 +62,8 @@ const otherData = toKeyValue(handlerDataOther(data5))
     { page: 'en/index_2', view: 'index', data: { title: '1111', data: handlerData(data2) , otherData, lang: 'en', index: 2} },
     { page: 'en/index_3', view: 'index', data: { title: '1111', data: handlerData(data3) , otherData, lang: 'en', index: 3} },
     { page: 'en/index_4', view: 'index', data: { title: '1111', data: handlerData(data4) , otherData, lang: 'en', index: 4} },
+    { page: 'en/article_1', view: 'index', data: { title: '1111', data: require('./data_article_1') , otherData, lang: 'en', index: 5} },
+    // { page: 'en/article/1', view: 'article', data: { title: '1111', data: null , otherData, lang: 'en', index: 5} },
 
 
     // { page: 'en/index', view: 'index', data: { title: '222' } },
