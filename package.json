@@ -2,6 +2,9 @@
   "name": "static-html",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "10.0.0"
+  },
   "scripts": {
     "start": "node-dev ./bin/www",
     "static": "gulp step1",
